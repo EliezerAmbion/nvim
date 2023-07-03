@@ -26,12 +26,13 @@ return {
     register_configurations = function(paths)
       local dap = require('dap')
 
-      dap.adapters.dart = {
-        type = "executable",
-        -- As of this writing, this functionality is open for review in https://github.com/flutter/flutter/pull/91802
-        command = "flutter",
-        args = {"debug_adapter"}
-      }
+      -- NOTE: check first if dap.adapters.dart is needed
+      -- dap.adapters.dart = {
+      --   type = "executable",
+      --   -- As of this writing, this functionality is open for review in https://github.com/flutter/flutter/pull/91802
+      --   command = "flutter",
+      --   args = {"debug_adapter"}
+      -- }
 
       dap.configurations.dart = {
         {
