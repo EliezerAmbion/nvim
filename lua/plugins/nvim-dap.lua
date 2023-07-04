@@ -31,12 +31,33 @@ return {
     --   }
     -- }
 
+
+    vim.keymap.set('n', '<Leader>df', function()
+      local widgets = require('dap.ui.widgets')
+      widgets.centered_float(widgets.frames)
+    end)
+
+    vim.keymap.set({'n', 'v'}, '<Leader>dh', function()
+      require('dap.ui.widgets').hover()
+    end)
+
+    vim.keymap.set({'n', 'v'}, '<Leader>dp', function()
+      require('dap.ui.widgets').preview()
+    end)
+
+    vim.keymap.set('n', '<Leader>ds', function()
+      local widgets = require('dap.ui.widgets')
+      widgets.centered_float(widgets.scopes)
+    end)
+
     dapui.setup()
   end,
 
   keys = {
     { '<leader>dc', '<cmd>lua require("dap").continue()<cr>',          desc = 'Debug Continue' },
     { '<leader>db', '<cmd>lua require("dap").toggle_breakpoint()<cr>', desc = 'Debug Add Breakpoint' },
-    { '<leader>do', '<cmd>lua require("dapui").toggle()<cr>', desc = 'Debug Add Breakpoint' },
+    { '<leader>dr', '<cmd>lua require("dap").repl.open()<cr>', desc = 'Debug Repl Open' }, -- check what this thing do
+    { '<leader>do', '<cmd>lua require("dapui").toggle()<cr>', desc = 'Debug Open UI' },
   }
 }
+
