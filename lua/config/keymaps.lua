@@ -10,8 +10,8 @@ local normalmoderemap = function(newkeymap, func, desc)
 end
 
 -- vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
-normalmoderemap('<leader>ww', '<cmd>w<cr>', 'Write/Save the file')
 normalmoderemap('<leader>/', '<cmd>nohlsearch<cr>', 'Remove highlights in search')
+normalmoderemap('<leader>ww', '<cmd>w<cr>', 'Write/Save the file')
 normalmoderemap('J', 'mzJ`z', 'Append the line below the cursor after the current line')
 normalmoderemap('<n>', 'nzzzv', 'Center the cursor in the middle of the screent when search jumping')
 normalmoderemap('<N>', 'Nzzzv', 'Center the cursor in the middle of the screent when search jumping')
@@ -22,14 +22,14 @@ normalmoderemap('<C-h>', '<C-w>h', 'Left: Change window focus')
 normalmoderemap('<C-l>', '<C-w>l', 'Right: Change window focus')
 normalmoderemap('<C-k>', '<C-w>k', 'Up: Change window focus')
 normalmoderemap('<C-j>', '<C-w>j', 'Down: Change window focus')
---
---normalmoderemap('<C-S-H>', '<C-w>h', '(Mac OS) Left: Change window focus')
---normalmoderemap('<C-S-L>', '<C-w>l', '(Mac OS) Right: Change window focus')
---normalmoderemap('<C-S-K>', '<C-w>k', '(Mac OS) Up: Change window focus')
---normalmoderemap('<C-S-J>', '<C-w>j', '(Mac OS) Down: Change window focus')
 
 normalmoderemap('<leader>o', 'o<esc>0', 'add a space below w/o leaving normal mode')
 normalmoderemap('<leader>O', 'O<Esc>0', 'Add a space ABOVE w/o leaving normal mode')
+
+normalmoderemap("<C-Up>", "<cmd>resize +2<cr>", "Increase window height")
+normalmoderemap("<C-Down>", "<cmd>resize -2<cr>", "Decrease window height")
+normalmoderemap("<C-Left>", "<cmd>vertical resize -2<cr>", "Decrease window width")
+normalmoderemap("<C-Right>", "<cmd>vertical resize +2<cr>", "Increase window width")
 
 -- Copying to system clipboard
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = 'Shift V <leader>y: Copy the line to system clipboard' })

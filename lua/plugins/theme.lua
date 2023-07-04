@@ -1,10 +1,22 @@
 return {
-  -- the colorscheme should be available when starting Neovim
-  'folke/tokyonight.nvim',
-  lazy = false, -- make sure we load this during startup if it is your main colorscheme
-  priority = 1000, -- make sure to load this before all the other start plugins
+  'rose-pine/neovim',
+  name = 'rose-pine',
+  lazy = false,
+  priority = 1000,
+
+
   config = function()
-    -- load the colorscheme here
-    vim.cmd([[colorscheme tokyonight]])
-  end,
+    require('rose-pine').setup({
+      -- @usage 'auto'|'main'|'moon'|'dawn'
+      variant = 'moon',
+      --- @usage 'main'|'moon'|'dawn'
+      dark_variant = 'moon',
+      disable_background = false,
+      disable_float_background = true,
+      disable_italics = false,
+
+    })
+
+    vim.cmd('colorscheme rose-pine')
+  end
 }
