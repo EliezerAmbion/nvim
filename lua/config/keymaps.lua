@@ -11,39 +11,34 @@ end
 
 -- vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 normalmoderemap('<leader>/', '<cmd>nohlsearch<cr>', 'Remove highlights in search')
-normalmoderemap('<leader>ww', '<cmd>w<cr>', 'Write/Save the file')
 normalmoderemap('J', 'mzJ`z', 'Append the line below the cursor after the current line')
 normalmoderemap('<n>', 'nzzzv', 'Center the cursor in the middle of the screent when search jumping')
 normalmoderemap('<N>', 'Nzzzv', 'Center the cursor in the middle of the screent when search jumping')
 normalmoderemap('<C-d>', '<C-u>zz', 'Center the cursor in the middle of the screen when jumping upwards')
 normalmoderemap('<C-d>', '<C-d>zz', 'Center the cursor in the middle of the screen when jumping downwards')
 
-<<<<<<< Updated upstream
-normalmoderemap('<C-h>', '<C-w>h', 'Left: Change window focus')
-normalmoderemap('<C-l>', '<C-w>l', 'Right: Change window focus')
-normalmoderemap('<C-k>', '<C-w>k', 'Up: Change window focus')
-normalmoderemap('<C-j>', '<C-w>j', 'Down: Change window focus')
-=======
--- normalmoderemap('<C-h>', '<C-w>h', 'Left: Change window focus')
--- normalmoderemap('<C-l>', '<C-w>l', 'Right: Change window focus')
--- normalmoderemap('<C-k>', '<C-w>k', 'Up: Change window focus')
--- normalmoderemap('<C-j>', '<C-w>j', 'Down: Change window focus')
-
+-- Window Splits
 normalmoderemap('<leader>sv', '<C-w>v', 'Vertical Split')
 normalmoderemap('<leader>sh', '<C-w>s', 'Horizontal Split')
->>>>>>> Stashed changes
+normalmoderemap('<leader>se', '<C-w>=', 'Equal Splits')
+normalmoderemap('<leader>sx', '<cmd>close<cr>', 'Close Current Split Window')
 
-normalmoderemap('<leader>o', 'o<esc>0', 'add a space below w/o leaving normal mode')
-normalmoderemap('<leader>O', 'O<Esc>0', 'Add a space ABOVE w/o leaving normal mode')
-
-<<<<<<< Updated upstream
+-- Window Resizing
 normalmoderemap("<C-Up>", "<cmd>resize +2<cr>", "Increase window height")
 normalmoderemap("<C-Down>", "<cmd>resize -2<cr>", "Decrease window height")
 normalmoderemap("<C-Left>", "<cmd>vertical resize -2<cr>", "Decrease window width")
 normalmoderemap("<C-Right>", "<cmd>vertical resize +2<cr>", "Increase window width")
-=======
+
+-- Tabs: NOTE: not working, maybe clashed w/ barbar plugin
+normalmoderemap('<leader>to', '<cmd>tabnew<cr>', 'Open New Tab')
+normalmoderemap('<leader>tx', '<cmd>tabclose<cr>', 'Close Current Tab')
+normalmoderemap('<leader>tn', '<cmd>tabn<cr>', 'Go To Next Tab')
+normalmoderemap('<leader>tp', '<cmd>tabp<cr>', 'Go To Prev Tab')
+
+normalmoderemap('<leader>o', 'o<esc>0', 'add a space below w/o leaving normal mode')
+normalmoderemap('<leader>O', 'O<Esc>0', 'Add a space ABOVE w/o leaving normal mode')
+
 normalmoderemap('x', '"_x', 'Delete single char w/o copying to the register')
->>>>>>> Stashed changes
 
 -- Copying to system clipboard
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = 'Shift V <leader>y: Copy the line to system clipboard' })
