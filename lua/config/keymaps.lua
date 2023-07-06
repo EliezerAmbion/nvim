@@ -18,18 +18,32 @@ normalmoderemap('<N>', 'Nzzzv', 'Center the cursor in the middle of the screent 
 normalmoderemap('<C-d>', '<C-u>zz', 'Center the cursor in the middle of the screen when jumping upwards')
 normalmoderemap('<C-d>', '<C-d>zz', 'Center the cursor in the middle of the screen when jumping downwards')
 
+<<<<<<< Updated upstream
 normalmoderemap('<C-h>', '<C-w>h', 'Left: Change window focus')
 normalmoderemap('<C-l>', '<C-w>l', 'Right: Change window focus')
 normalmoderemap('<C-k>', '<C-w>k', 'Up: Change window focus')
 normalmoderemap('<C-j>', '<C-w>j', 'Down: Change window focus')
+=======
+-- normalmoderemap('<C-h>', '<C-w>h', 'Left: Change window focus')
+-- normalmoderemap('<C-l>', '<C-w>l', 'Right: Change window focus')
+-- normalmoderemap('<C-k>', '<C-w>k', 'Up: Change window focus')
+-- normalmoderemap('<C-j>', '<C-w>j', 'Down: Change window focus')
+
+normalmoderemap('<leader>sv', '<C-w>v', 'Vertical Split')
+normalmoderemap('<leader>sh', '<C-w>s', 'Horizontal Split')
+>>>>>>> Stashed changes
 
 normalmoderemap('<leader>o', 'o<esc>0', 'add a space below w/o leaving normal mode')
 normalmoderemap('<leader>O', 'O<Esc>0', 'Add a space ABOVE w/o leaving normal mode')
 
+<<<<<<< Updated upstream
 normalmoderemap("<C-Up>", "<cmd>resize +2<cr>", "Increase window height")
 normalmoderemap("<C-Down>", "<cmd>resize -2<cr>", "Decrease window height")
 normalmoderemap("<C-Left>", "<cmd>vertical resize -2<cr>", "Decrease window width")
 normalmoderemap("<C-Right>", "<cmd>vertical resize +2<cr>", "Increase window width")
+=======
+normalmoderemap('x', '"_x', 'Delete single char w/o copying to the register')
+>>>>>>> Stashed changes
 
 -- Copying to system clipboard
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = 'Shift V <leader>y: Copy the line to system clipboard' })
