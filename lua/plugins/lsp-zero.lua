@@ -13,7 +13,6 @@ return {
       end,
     },
     { 'williamboman/mason-lspconfig.nvim' }, -- Optional
-    'jose-elias-alvarez/null-ls.nvim',
 
     -- Autocompletion
     { 'hrsh7th/nvim-cmp' },     -- Required. This is for the autosuggestion
@@ -22,13 +21,8 @@ return {
   },
 
   config = function()
-    local lsp_zero = require('lsp-zero').preset {
-      manage_nvim_cmp = {
-        set_sources = 'recommended',
-      },
-    }
+    local lsp_zero = require('lsp-zero').preset({})
     local lsp_config = require('lspconfig')
-    local null_ls = require 'null-ls'
     local cmp = require 'cmp'
 
     -- Fix Undefined global 'vim'
@@ -59,42 +53,30 @@ return {
 
     lsp_zero.on_attach(on_attach)
 
-    vim.diagnostic.config({
-      virtual_text = true,
-      signs = false,
-    })
+    -- lsp_config['dartls'].setup({
+    -- on_attach = on_attach,
+    -- root_dir = lsp_config.util.root_pattern('.git'),
 
-    lsp_config['dartls'].setup({
-      --on_attach = on_attach,
-      root_dir = lsp_config.util.root_pattern('.git'),
-
-      on_attach = function(client, bufnr)
-        -- Enable null-ls for the dart language server
-        client.resolved_capabilities.document_formatting = true
-        require("lspconfig")["null-ls"].setup {} -- Enable null-ls
-        require("lspconfig")["null-ls"].on_attach(client, bufnr)
-      end,
-    })
+    -- on_attach = function(client, bufnr)
+    -- Enable null-ls for the dart language server
+    -- client.resolved_capabilities.document_formatting = true
+    -- require("lspconfig")["null-ls"].setup {} -- Enable null-ls
+    -- require("lspconfig")["null-ls"].on_attach(client, bufnr)
+    -- end,
+    -- })
 
     lsp_zero.format_on_save({
       format_opts = {
         async = false,
-        timeout_ms = 1000,
+        timeout_ms = 10000,
       },
       servers = {
         ['lua_ls'] = { 'lua' },
-        ['null-ls'] = { 'dart', }
+        ['dartls'] = { 'dart', }
       }
     })
 
-    lsp_zero.setup()
-
-    null_ls.setup {
-      on_attach = on_attach,
-      sources = {
-        null_ls.builtins.formatting.prettier
-      },
-    }
+    lsp_zero.setup {}
 
     cmp.setup {
       sources = {
@@ -106,7 +88,7 @@ return {
 
       mapping = {
         ["<C-e>"] = cmp.mapping.abort(),
-        ['<CR>'] = cmp.mapping.confirm { select = true },
+        ['<CR>'] = cmp.mapping.confirm { select = false },
       },
     }
   end
