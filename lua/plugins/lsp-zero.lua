@@ -53,18 +53,6 @@ return {
 
     lsp_zero.on_attach(on_attach)
 
-    -- lsp_config['dartls'].setup({
-    -- on_attach = on_attach,
-    -- root_dir = lsp_config.util.root_pattern('.git'),
-
-    -- on_attach = function(client, bufnr)
-    -- Enable null-ls for the dart language server
-    -- client.resolved_capabilities.document_formatting = true
-    -- require("lspconfig")["null-ls"].setup {} -- Enable null-ls
-    -- require("lspconfig")["null-ls"].on_attach(client, bufnr)
-    -- end,
-    -- })
-
     lsp_zero.format_on_save({
       format_opts = {
         async = false,
@@ -78,6 +66,7 @@ return {
 
     lsp_zero.setup {}
 
+    -- TODO: what is this?
     cmp.setup {
       sources = {
         { name = 'nvim_lsp' },

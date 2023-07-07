@@ -19,7 +19,8 @@ return {
       g = ' Glance',
       G = ' Git',
       u = ' Undo Tree',
-      n = ' Noice'
+      n = ' Noice',
+      s = ' Split Window'
 
     }, { prefix = '<leader>' })
   end

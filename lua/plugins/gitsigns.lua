@@ -4,7 +4,7 @@ return {
   lazy = true,
 
   opts = {
-    signs  = {
+    signs               = {
       add = { text = '│' },
       change = { text = '│' },
       delete = { text = '_' },
