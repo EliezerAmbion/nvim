@@ -20,3 +20,20 @@ return {
     vim.cmd('colorscheme rose-pine')
   end
 }
+
+-- NOTE: use this if you are tired of rose pine
+--[[ return {
+  'bluz71/vim-nightfly-colors',
+  name = 'nightfly',
+  lazy = false,
+  priority = 1000,
+
+  init = function()
+    -- Lua initialization file
+    vim.g.nightflyCursorColor = true
+  end,
+
+  config = function()
+    vim.cmd('colorscheme nightfly')
+  end
+} ]]
