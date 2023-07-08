@@ -1,7 +1,6 @@
 -- Adds git signs to the gutter
 return {
   'lewis6991/gitsigns.nvim',
-  lazy = true,
 
   opts = {
     signs               = {

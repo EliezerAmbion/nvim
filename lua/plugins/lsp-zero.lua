@@ -17,13 +17,22 @@ return {
     -- Autocompletion
     { 'hrsh7th/nvim-cmp' },     -- Required. This is for the autosuggestion
     { 'hrsh7th/cmp-nvim-lsp' }, -- Required. This is for flutter as well.
-    { 'L3MON4D3/LuaSnip' },     -- Required
+    { 'hrsh7th/cmp-path' },     -- Suggest path
+
+    -- Snippets
+    { 'L3MON4D3/LuaSnip' }, -- Required
+    { 'saadparwaiz1/cmp_luasnip' },
+    { 'rafamadriz/friendly-snippets' },
+
+    -- Icons on autocompletion
+    { 'onsails/lspkind.nvim' }
   },
 
   config = function()
     local lsp_zero = require('lsp-zero').preset({})
     local lsp_config = require('lspconfig')
     local cmp = require 'cmp'
+    local lspkind = require('lspkind')
 
     -- Fix Undefined global 'vim'
     lsp_zero.configure('lua_ls', {
@@ -66,18 +75,27 @@ return {
 
     lsp_zero.setup {}
 
-    -- TODO: what is this?
     cmp.setup {
+      -- sources for autocompletion
       sources = {
-        { name = 'nvim_lsp' },
-        { name = 'path' },
-        { name = 'luasnip' },
-        { name = 'buffer',  keyword_length = 5 },
+        { name = 'nvim_lsp' }, -- lsp
+        { name = 'path' },     -- file system paths
+        { name = 'luasnip' },  -- snippets
+        { name = 'buffer' },   -- text within current buffer
       },
-
       mapping = {
+        ['<C-k>'] = cmp.mapping.select_prev_item(),
+        ['<C-j>'] = cmp.mapping.select_next_item(),
+        ['<C-d>'] = cmp.mapping.scroll_docs(-4),
+        ['<C-u>'] = cmp.mapping.scroll_docs(4),
         ["<C-e>"] = cmp.mapping.abort(),
         ['<CR>'] = cmp.mapping.confirm { select = false },
+      },
+      formatting = {
+        format = lspkind.cmp_format({
+          maxwidth = 50,
+          ellipsis_char = "...",
+        }),
       },
     }
   end
