@@ -4,16 +4,49 @@ return {
   lazy = false,
   priority = 1000,
 
-
+  -- TODO: experiment with these configs
   config = function()
     require('rose-pine').setup({
       -- @usage 'auto'|'main'|'moon'|'dawn'
-      variant = 'moon',
+      variant = 'auto',
       --- @usage 'main'|'moon'|'dawn'
-      dark_variant = 'moon',
+      dark_variant = 'main',
       disable_background = false,
       disable_float_background = true,
       disable_italics = false,
+
+      --- @usage string hex value or named color from rosepinetheme.com/palette
+      groups = {
+        background = 'base',
+        background_nc = '_experimental_nc',
+        panel = 'surface',
+        panel_nc = 'base',
+        border = 'highlight_med',
+        comment = 'muted',
+        link = 'iris',
+        punctuation = 'subtle',
+
+        error = 'love',
+        hint = 'iris',
+        info = 'foam',
+        warn = 'gold',
+      },
+
+      -- Change specific vim highlight groups
+      -- https://github.com/rose-pine/neovim/wiki/Recipes
+      highlight_groups = {
+        IndentBlanklineContextChar = {
+          fg = 'rose',
+          -- Tried with & without this, didn't seem to make a difference
+          -- nocombine = true
+        },
+
+        -- ColorColumn = { bg = 'rose' },
+
+        -- Blend colours against the "base" background
+        -- CursorLine = { bg = 'foam', blend = 10 },
+        -- StatusLine = { fg = 'love', bg = 'love', blend = 10 },
+      }
 
     })
 
