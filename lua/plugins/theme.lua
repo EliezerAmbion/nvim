@@ -4,7 +4,6 @@ return {
   lazy = false,
   priority = 1000,
 
-  -- TODO: experiment with these configs
   config = function()
     require('rose-pine').setup({
       -- @usage 'auto'|'main'|'moon'|'dawn'
@@ -37,15 +36,12 @@ return {
       highlight_groups = {
         IndentBlanklineContextChar = {
           fg = 'rose',
-          -- Tried with & without this, didn't seem to make a difference
-          -- nocombine = true
         },
 
-        -- ColorColumn = { bg = 'rose' },
-
         -- Blend colours against the "base" background
-        -- CursorLine = { bg = 'foam', blend = 10 },
+        CursorLine = { bg = 'foam', blend = 20 },
         -- StatusLine = { fg = 'love', bg = 'love', blend = 10 },
+        -- ColorColumn = { bg = 'pine' },
       }
 
     })

@@ -29,7 +29,7 @@ set.undofile = true
 set.hlsearch = true
 
 set.incsearch = true
---
+
 -- ignore case in search patterns
 set.ignorecase = true
 
@@ -49,11 +49,15 @@ set.colorcolumn = ''
 set.termguicolors = true
 set.bg = 'dark'
 
--- Set completeopt to have a better completion experience
-set.completeopt = 'menuone,noselect'
+-- cursor
+-- vim.cmd([[highlight nCursor guifg=#ff0000 guibg=#ff0000]])
+set.guicursor = "n:blinkon1,n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20"
 
 -- hightlight the current line
 set.cursorline = true
+
+-- Set completeopt to have a better completion experience
+set.completeopt = 'menuone,noselect'
 
 -- time of leader
 set.timeoutlen = 4000
