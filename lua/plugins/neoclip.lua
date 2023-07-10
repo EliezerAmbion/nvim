@@ -1,14 +1,12 @@
 return {
   'AckslD/nvim-neoclip.lua',
-  lazy = false,
+  lazy = true,
 
   keys = {
     { '<leader>fy', '<cmd>Telescope neoclip<cr>' }
   },
 
   config = function()
-    require('telescope').load_extension('neoclip')
-
     -- needed to prevent storing white spaces
     local function is_whitespace(line)
       return vim.fn.match(line, [[^\s*$]]) ~= -1
