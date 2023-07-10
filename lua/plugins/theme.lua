@@ -39,8 +39,8 @@ return {
         },
 
         -- Blend colours against the "base" background
-        CursorLine = { bg = 'foam', blend = 20 },
-        -- StatusLine = { fg = 'love', bg = 'love', blend = 10 },
+        CursorLine = { bg = 'foam', blend = 10 },
+        -- StatusLine = { fg = 'highlight_high', bg = 'love', blend = 10 },
         -- ColorColumn = { bg = 'pine' },
       }
 
