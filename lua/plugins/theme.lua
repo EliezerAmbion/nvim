@@ -11,21 +11,21 @@ return {
       --- @usage 'main'|'moon'|'dawn'
       dark_variant = 'main',
       disable_background = false,
-      disable_float_background = false,
+      disable_float_background = true,
       disable_italics = false,
 
       --- @usage string hex value or named color from rosepinetheme.com/palette
       groups = {
         background = 'base',
         background_nc = '_experimental_nc',
-        panel = 'surface',
+        panel = 'base',
         panel_nc = 'base',
-        border = 'highlight_med',
+        border = 'gold',
         comment = 'muted',
         link = 'iris',
         punctuation = 'subtle',
 
-        error = 'love',
+        error = 'rose',
         hint = 'iris',
         info = 'foam',
         warn = 'gold',
@@ -35,7 +35,7 @@ return {
       -- https://github.com/rose-pine/neovim/wiki/Recipes
       highlight_groups = {
         IndentBlanklineContextChar = {
-          fg = 'rose',
+          fg = 'gold',
         },
 
         -- Blend colours against the "base" background

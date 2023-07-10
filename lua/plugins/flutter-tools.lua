@@ -82,7 +82,7 @@ return {
         renameFilesWithClasses = 'prompt',
         enableSnippets = true,
         updateImportsOnRename = true,
-        lineLength = 80, -- the default is 80
+        lineLength = 100, -- the default is 80
 
         analysisExcludedFolders = {
           vim.fn.expand('$HOME/AppData/Local/Pub/Cache'),

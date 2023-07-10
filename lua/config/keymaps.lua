@@ -30,10 +30,10 @@ normalmoderemap("<C-Left>", "<cmd>vertical resize -2<cr>", "Decrease window widt
 normalmoderemap("<C-Right>", "<cmd>vertical resize +2<cr>", "Increase window width")
 
 -- Tabs: NOTE: not working, maybe clashed w/ barbar plugin
-normalmoderemap('<leader>to', '<cmd>tabnew<cr>', 'Open New Tab')
-normalmoderemap('<leader>tx', '<cmd>tabclose<cr>', 'Close Current Tab')
-normalmoderemap('<leader>tn', '<cmd>tabn<cr>', 'Go To Next Tab')
-normalmoderemap('<leader>tp', '<cmd>tabp<cr>', 'Go To Prev Tab')
+-- normalmoderemap('<leader>to', '<cmd>tabnew<cr>', 'Open New Tab')
+-- normalmoderemap('<leader>tx', '<cmd>tabclose<cr>', 'Close Current Tab')
+-- normalmoderemap('<leader>tn', '<cmd>tabn<cr>', 'Go To Next Tab')
+-- normalmoderemap('<leader>tp', '<cmd>tabp<cr>', 'Go To Prev Tab')
 
 normalmoderemap('<leader>o', 'o<esc>0', 'add a space below w/o leaving normal mode')
 normalmoderemap('<leader>O', 'O<Esc>0', 'Add a space ABOVE w/o leaving normal mode')

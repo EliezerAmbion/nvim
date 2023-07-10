@@ -7,6 +7,7 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
 
+--- @IMPORTANT this should be above the setup
 vim.keymap.set('n', '<leader>l', '<cmd>Lazy<cr>')
 
 require("lazy").setup({
@@ -21,10 +22,6 @@ require("lazy").setup({
     { import = "plugins" },
   },
 
-  keys = {
-    { '<leader>l', '<cmd>Lazy<cr>', { noremap = true, buffer = bufnr, desc = 'Open Lazy Modal' } }
-  },
-
   defaults = {
     -- By default, only LazyVim plugins will be lazy-loaded. Your custom plugins will load during startup.
     -- If you know what you're doing, you can set this to `true` to have all your custom plugins lazy-loaded by default.
@@ -34,6 +31,11 @@ require("lazy").setup({
     version = false, -- always use the latest git commit
     -- version = "*", -- try installing the latest stable version for plugins that support semver
   },
+
+  ui = {
+    border = 'rounded', ---@values: look for find help: border
+  },
+
   install = { colorscheme = { "rose-pine", }, missing = true },
   checker = { enabled = false }, -- automatically check for plugin updates
   performance = {

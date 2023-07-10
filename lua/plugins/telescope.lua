@@ -21,11 +21,10 @@ return {
       defaults = {
         border = true,
 
-        layout_config = {
-          vertical = {
-            width = 0.5
-          }
-        },
+        layout_strategy = 'vertical',
+        layout_config = { prompt_position = 'top', width = 0.95, mirror = true },
+        sorting_strategy = "ascending",
+        winblend = 0,
 
         file_ignore_patterns = {
           'build',
@@ -53,16 +52,6 @@ return {
             ['<C-p>'] = function() end,
             ['<C-n>'] = function() end,
           },
-        },
-      },
-
-      pickers = {
-        find_files = {
-          theme = "dropdown",
-        },
-
-        live_grep = {
-          theme = "dropdown",
         },
       },
 
