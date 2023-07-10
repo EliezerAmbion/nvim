@@ -34,7 +34,7 @@ set.incsearch = true
 set.ignorecase = true
 
 -- Line below the cursor when navigating
-set.scrolloff = 20
+set.scrolloff = 10
 
 -- minimal number of screen columns either side of cursor if wrap is `false`
 set.sidescrolloff = 8

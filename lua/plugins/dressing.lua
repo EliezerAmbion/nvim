@@ -1,7 +1,7 @@
 -- pop up window will show instead typing in cmdline
 return {
   'stevearc/dressing.nvim',
-  lazy = true,
+  lazy = true, -- flutter-tools will load this
 
   opts = {
     input = {

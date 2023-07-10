@@ -11,7 +11,7 @@ return {
       --- @usage 'main'|'moon'|'dawn'
       dark_variant = 'main',
       disable_background = false,
-      disable_float_background = true,
+      disable_float_background = false,
       disable_italics = false,
 
       --- @usage string hex value or named color from rosepinetheme.com/palette
