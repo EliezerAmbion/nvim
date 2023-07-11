@@ -68,6 +68,9 @@ set.timeoutlen = 4000
 -- enable mouse click
 -- set.mouse = 'a'
 
+-- to enable bufferline mouse hover
+set.mousemoveevent = true
+
 -- makes the text of long lines that exceed the width of the screen always visible
 set.wrap = false
 
