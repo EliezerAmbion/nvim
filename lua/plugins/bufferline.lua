@@ -5,10 +5,10 @@ return {
   event = 'VeryLazy',
 
   keys = {
-    { '<C-o>.',      '<cmd>BufferLineCycleNext<cr>', desc = 'BufferLine Next Tab' },
-    { '<C-i>,',      '<cmd>BufferLineCyclePrev<cr>', desc = 'BufferLine Prev Tab' },
-    { '<leader>tmn', '<cmd>BufferLineMoveNext<cr>',  desc = 'BufferLine Move Next Tab' },
-    { '<leader>tmp', '<cmd>BufferLineMovePrev<cr>',  desc = 'BufferLine Move Prev Tab' },
+    { '<C-p>',  '<cmd>BufferLineCyclePrev<cr>', desc = 'BufferLine Prev Tab' },
+    { '<C-n>',  '<cmd>BufferLineCycleNext<cr>', desc = 'BufferLine Next Tab' },
+    { '<Tab>p', '<cmd>BufferLineMovePrev<cr>',  desc = 'BufferLine Move Prev Tab' },
+    { '<Tab>n', '<cmd>BufferLineMoveNext<cr>',  desc = 'BufferLine Move Next Tab' },
   },
 
   config = function()
