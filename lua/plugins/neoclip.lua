@@ -1,16 +1,18 @@
 return {
   'AckslD/nvim-neoclip.lua',
-  lazy = true,
+  lazy = false, --- @NOTE: if set to true, the first yank is not saved.
   dependencies = {
-    { 'kkharji/sqlite.lua',           module = 'sqlite' },
+    -- { 'kkharji/sqlite.lua', module = 'sqlite' }, -- no need to save in sql
     { 'nvim-telescope/telescope.nvim' },
   },
 
   keys = {
-    { '<leader>fy', '<cmd>Telescope neoclip<cr>' }
+    { '<leader>fy', '<cmd>Telescope neoclip<cr>', desc = 'Open Neoclip Yanks' }
   },
 
   config = function()
+    require('telescope').load_extension('neoclip')
+
     -- needed to prevent storing white spaces
     local function is_whitespace(line)
       return vim.fn.match(line, [[^\s*$]]) ~= -1

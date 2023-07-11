@@ -55,9 +55,9 @@ return {
         },
       },
 
-      extensions = {
+      --[[ extensions = {
         require('telescope').load_extension('neoclip')
-      }
+      } ]]
     })
   end,
 }
