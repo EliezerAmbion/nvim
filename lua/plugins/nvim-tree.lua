@@ -5,6 +5,7 @@ return {
   dependencies = {
     { 'nvim-tree/nvim-web-devicons', lazy = true },
   },
+
   config = function()
     -- change color for arrows in tree to light blue
     vim.cmd([[ highlight NvimTreeIndentMarker guifg=#3FC5FF ]])

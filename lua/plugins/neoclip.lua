@@ -1,6 +1,10 @@
 return {
   'AckslD/nvim-neoclip.lua',
   lazy = true,
+  dependencies = {
+    { 'kkharji/sqlite.lua',           module = 'sqlite' },
+    { 'nvim-telescope/telescope.nvim' },
+  },
 
   keys = {
     { '<leader>fy', '<cmd>Telescope neoclip<cr>' }
