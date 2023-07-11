@@ -85,6 +85,7 @@ return {
         { name = 'luasnip' },  -- snippets
         { name = 'buffer' },   -- text within current buffer
       },
+
       mapping = {
         ['<C-k>'] = cmp.mapping.select_prev_item(),
         ['<C-j>'] = cmp.mapping.select_next_item(),
@@ -93,6 +94,7 @@ return {
         ["<C-e>"] = cmp.mapping.abort(),
         ['<CR>'] = cmp.mapping.confirm { select = false },
       },
+
       formatting = {
         format = lspkind.cmp_format({
           maxwidth = 50,
