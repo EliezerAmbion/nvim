@@ -3,7 +3,7 @@ return {
   version = '*',
   lazy = true,
   dependencies = {
-    { 'nvim-tree/nvim-web-devicons', lazy = true },
+    { 'nvim-tree/nvim-web-devicons' },
   },
 
   config = function()

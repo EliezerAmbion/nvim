@@ -12,6 +12,7 @@ return {
     { '<leader>fs', function() require('telescope.builtin').grep_string() end,  desc = 'Find Grep on the cursor' },
     { '<leader>fb', function() require('telescope.builtin').buffers() end,      desc = 'Find Buffers' },
     { '<leader>fh', function() require('telescope.builtin').help_tags() end,    desc = 'Find Help Tags' },
+    { '<leader>fo', function() require('telescope.builtin').oldfiles() end,     desc = 'Find Recents' },
     { '<leader>fg', function() require('telescope.builtin').git_branches() end, desc = 'Find Git Branches' },
     { '<leader>fc', function() require('telescope.builtin').git_commits() end,  desc = 'Find Git Commits' },
   },
