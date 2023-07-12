@@ -13,6 +13,13 @@ return {
     require('nvim-tree').setup {
       update_focused_file = { enable = true },
 
+      view = {
+        adaptive_size = true,
+        centralize_selection = true,
+        number = true,
+        relativenumber = false,
+      },
+
       renderer = {
         icons = {
           glyphs = {
@@ -27,6 +34,8 @@ return {
       -- disable window_picker for explorer to work well with window splits
       actions = {
         open_file = {
+          quit_on_open = true,
+          resize_window = true,
           window_picker = {
             enable = false,
           },
