@@ -1,11 +1,12 @@
 return {
   'goolord/alpha-nvim',
-  event = "VimEnter",
+  event = 'VimEnter',
   dependencies = { 'nvim-tree/nvim-web-devicons' },
 
   config = function()
     local alpha = require('alpha')
     local dashboard = require('alpha.themes.dashboard')
+    -- require('telescope')
 
     local logo = [[
 
@@ -19,15 +20,15 @@ return {
     ]]
 
     local function getGreeting(name)
-      local tableTime = os.date("*t")
-      local datetime = os.date(" %Y-%m-%d   %H:%M:%S")
+      local tableTime = os.date('*t')
+      local datetime = os.date(' %Y-%m-%d   %H:%M:%S')
       local hour = tableTime.hour
       local greetingsTable = {
-        [1] = "  Sleep well",
-        [2] = "  Good morning",
-        [3] = "  Good afternoon",
-        [4] = "  Good evening",
-        [5] = "󰖔  Good night",
+        [1] = '  Sleep well',
+        [2] = '  Good morning',
+        [3] = '  Good afternoon',
+        [4] = '  Good evening',
+        [5] = '󰖔  Good night',
       }
       local greetingIndex = 0
       if hour == 23 or hour < 7 then
@@ -41,25 +42,25 @@ return {
       elseif hour >= 21 then
         greetingIndex = 5
       end
-      return "\t" .. datetime .. "\t" .. greetingsTable[greetingIndex] .. ", " .. name
+      return '\t' .. datetime .. '\t' .. greetingsTable[greetingIndex] .. ', ' .. name
     end
 
-
     local keys = {
-      dashboard.button("ff", "  Find file", ":Telescope find_files <CR>"),
-      dashboard.button("fl", "  Find text", ":Telescope live_grep <CR>"),
-      dashboard.button("fo", "  Recents", ":Telescope oldfiles <CR>"),
+      dashboard.button('ff', '  Find file', '<cmd>Telescope find_files<cr>'),
+      dashboard.button('fl', '  Find text', '<cmd>Telescope live_grep<cr>'),
+      dashboard.button('fo', '  Recents', '<cmd>Telescope oldfiles<cr>'),
+      dashboard.button('fo', '󰜎  Flutter Run', '<cmd>FlutterRun<cr>'),
     }
 
     local function footer()
-      return "Don't Stop Until You are Proud..."
+      return 'Do not Stop Until You are Proud...'
     end
 
-    -- dashboard.section.header.opts.hl = "Include"
-    -- dashboard.section.buttons.opts.hl = "Keyword"
-    -- dashboard.section.footer.opts.hl = "Type"
+    -- dashboard.section.header.opts.hl = 'Include'
+    -- dashboard.section.buttons.opts.hl = 'Keyword'
+    -- dashboard.section.footer.opts.hl = 'Type'
 
-    dashboard.section.header.val = vim.split(logo .. "\n" .. getGreeting('Eli'), "\n")
+    dashboard.section.header.val = vim.split(logo .. '\n' .. getGreeting('Eli'), '\n')
     dashboard.section.buttons.val = keys
     dashboard.section.footer.val = footer()
 
