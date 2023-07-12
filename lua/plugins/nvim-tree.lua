@@ -11,6 +11,8 @@ return {
     vim.cmd([[ highlight NvimTreeIndentMarker guifg=#3FC5FF ]])
 
     require('nvim-tree').setup {
+      update_focused_file = { enable = true },
+
       renderer = {
         icons = {
           glyphs = {

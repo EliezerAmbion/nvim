@@ -10,7 +10,7 @@ return {
       lualine_b = { 'branch', 'diff' },
       lualine_c = { {
         'filename',
-        path = 0,
+        path = 1,
         color = { gui = 'italic', },
       } },
 
