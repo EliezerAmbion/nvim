@@ -5,6 +5,9 @@ return {
   priority = 1000,
 
   config = function()
+    local bgColor = 'foam'
+    local accentColor = 'gold'
+
     require('rose-pine').setup({
       -- @usage 'auto'|'main'|'moon'|'dawn'
       variant = 'auto',
@@ -34,13 +37,18 @@ return {
       -- Change specific vim highlight groups
       -- https://github.com/rose-pine/neovim/wiki/Recipes
       highlight_groups = {
+        -- Telescope
+        TelescopeSelection = { fg = accentColor, bg = bgColor, blend = 20 },
+        TelescopeSelectionCaret = { fg = accentColor, bg = accentColor },
+
+        -- Indent Blankline
         IndentBlanklineContextChar = {
-          fg = 'gold',
+          fg = accentColor,
         },
 
         -- Blend colours against the "base" background
-        CursorLine = { bg = 'foam', blend = 10 },
-        -- StatusLine = { fg = 'highlight_high', bg = 'love', blend = 10 },
+        CursorLine = { bg = bgColor, blend = 20 },
+        -- StatusLine = { fg = 'highlight_high', bg = 'love', blend = 60 },
         -- ColorColumn = { bg = 'pine' },
       }
 
