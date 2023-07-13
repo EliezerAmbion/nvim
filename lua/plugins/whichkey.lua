@@ -20,7 +20,8 @@ return {
       G = ' Git',
       u = ' Undo Tree',
       n = ' Noice',
-      s = ' Split Window'
+      s = ' Split Window',
+      x = ' Trouble',
 
     }, { prefix = '<leader>' })
   end

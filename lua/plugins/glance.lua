@@ -19,6 +19,10 @@ return {
 
     border = {
       enable = true,
+    },
+
+    list = {
+      position = 'left',
     }
   }
 }

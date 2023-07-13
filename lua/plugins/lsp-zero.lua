@@ -29,8 +29,8 @@ return {
   },
 
   config = function()
+    -- local lsp_config = require('lspconfig')
     local lsp_zero = require('lsp-zero').preset({})
-    local lsp_config = require('lspconfig')
     local cmp = require 'cmp'
     local lspkind = require('lspkind')
 
@@ -77,14 +77,20 @@ return {
 
     lsp_zero.setup {}
 
+    local rosepine = require('rose-pine.palette')
+    vim.api.nvim_set_hl(0, "MyPmenu", { fg = 'White' })
+    vim.api.nvim_set_hl(0, "MyCursorLine", { bg = rosepine.pine, fg = rosepine.text, bold = true, italic = true })
+
     cmp.setup {
       window = {
         completion = {
-          border = 'double',
+          border = 'rounded',
+          winhighlight = "Normal:MyPmenu,CursorLine:MyCursorLine", -- this will set rose-pine border as well
         },
         documentation = {
           border = 'rounded',
-        }
+          winhighlight = "Normal:MyPmenu",
+        },
       },
       -- sources for autocompletion
       sources = {
@@ -110,5 +116,5 @@ return {
         }),
       },
     }
-  end
+  end,
 }

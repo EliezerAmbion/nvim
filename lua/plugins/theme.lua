@@ -14,7 +14,7 @@ return {
       --- @usage 'main'|'moon'|'dawn'
       dark_variant = 'main',
       disable_background = false,
-      disable_float_background = true,
+      disable_float_background = false,
       disable_italics = false,
 
       --- @usage string hex value or named color from rosepinetheme.com/palette
@@ -48,7 +48,7 @@ return {
 
         -- Blend colours against the "base" background
         CursorLine = { bg = bgColor, blend = 20 },
-        -- StatusLine = { fg = 'highlight_high', bg = 'love', blend = 60 },
+        -- StatusLine = { fg = 'text', bg = 'love', blend = 60 },
         -- ColorColumn = { bg = 'pine' },
       }
 

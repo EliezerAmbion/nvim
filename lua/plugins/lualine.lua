@@ -5,16 +5,17 @@ return {
 
   config = function()
     local theme = require("lualine.themes.rose-pine")
-    local color = require('rose-pine.palette')
+    local rosepine = require('rose-pine.palette')
     local modes = { "normal", "insert", "visual", "replace", "command", "inactive" }
 
     for _, mode in ipairs(modes) do
-      theme[mode].c.bg = color.love;
+      theme[mode].c.bg = rosepine.love;
+      theme[mode].c.fg = rosepine.text;
     end
 
     require('lualine').setup({
       options = {
-        theme = theme,
+        theme = theme, -- this will act as a separator on horizontal splits
       },
 
       sections = {
