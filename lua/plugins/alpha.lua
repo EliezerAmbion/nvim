@@ -51,17 +51,13 @@ return {
       dashboard.button('fo', '󱋡  Recents', '<cmd>Telescope oldfiles<cr>'),
     }
 
-    local function footer()
-      return 'Do not Stop Until You are Proud...'
-    end
-
     -- dashboard.section.header.opts.hl = 'Include'
     -- dashboard.section.buttons.opts.hl = 'Keyword'
     -- dashboard.section.footer.opts.hl = 'Type'
 
     dashboard.section.header.val = vim.split(logo .. '\n' .. getGreeting('Eli'), '\n')
     dashboard.section.buttons.val = keys
-    dashboard.section.footer.val = footer()
+    dashboard.section.footer.val = G.alpha.footer
 
     alpha.setup(dashboard.opts)
 
