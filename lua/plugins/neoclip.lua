@@ -1,8 +1,6 @@
---- @NOTE: fix first yank not being saved
-
 return {
   'AckslD/nvim-neoclip.lua',
-  lazy = true,
+  lazy = false,
   dependencies = {
     -- { 'kkharji/sqlite.lua', module = 'sqlite' }, -- no need to save in sql
     { 'nvim-telescope/telescope.nvim' },

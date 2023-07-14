@@ -32,7 +32,6 @@ return {
     -- local lsp_config = require('lspconfig')
     local lsp_zero = require('lsp-zero').preset({})
     local cmp = require 'cmp'
-    local lspkind = require('lspkind')
 
     -- Fix Undefined global 'vim'
     lsp_zero.configure('lua_ls', {
@@ -113,13 +112,6 @@ return {
         ["<C-e>"] = cmp.mapping.abort(),
         ['<CR>'] = cmp.mapping.confirm { select = true }, -- select first candidate in autocomplete upon enter
       },
-
-      --[[ formatting = {
-        format = lspkind.cmp_format({
-          maxwidth = 60,
-          ellipsis_char = "...",
-        }),
-      }, ]]
     }
   end,
 }
