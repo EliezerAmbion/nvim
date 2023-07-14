@@ -4,18 +4,22 @@ return {
   event = 'VeryLazy',
 
   config = function()
-    local theme = require("lualine.themes.rose-pine")
+    --- @NOTE: if you want to change the color of c ie c.bg and c.fg
+    --- @NOTE: uncomment below and use options.theme = theme
+
+    --[[ local theme = require("lualine.themes.rose-pine")
     local rosepine = require('rose-pine.palette')
     local modes = { "normal", "insert", "visual", "replace", "command", "inactive" }
 
     for _, mode in ipairs(modes) do
       theme[mode].c.bg = rosepine.pine;
       theme[mode].c.fg = rosepine.text;
-    end
+    end ]]
 
     require('lualine').setup({
       options = {
-        theme = theme, -- this will act as a separator on horizontal splits
+        --theme = theme, -- this will act as separator on horizontal splits if globalstatus is false
+        globalstatus = true,
       },
 
       sections = {
@@ -29,14 +33,14 @@ return {
         } },
 
         --right side
-        lualine_x = { 'searchcount' },
+        lualine_x = { 'searchcount', 'selectioncount', },
         lualine_y = { 'diagnostics' },
         lualine_z = { 'location' }
       }
     })
   end
 
-  -- NOTE: uncomment to tweak colors and I like rose pine colorshceme for now.
+  --- @THEME2 nightfly
   --[[ config = function()
     local lualine_nightfly = require("lualine.themes.nightfly")
 
