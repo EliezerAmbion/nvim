@@ -6,7 +6,7 @@ local normalmoderemap = function(newkeymap, func, desc)
     desc = 'LSP: ' .. desc
   end
 
-  vim.keymap.set('n', newkeymap, func, { noremap = true, buffer = bufnr, desc = desc })
+  vim.keymap.set('n', newkeymap, func, { noremap = true, desc = desc })
 end
 
 -- vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)

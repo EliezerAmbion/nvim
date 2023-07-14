@@ -9,7 +9,7 @@ return {
     local modes = { "normal", "insert", "visual", "replace", "command", "inactive" }
 
     for _, mode in ipairs(modes) do
-      theme[mode].c.bg = rosepine.love;
+      theme[mode].c.bg = rosepine.pine;
       theme[mode].c.fg = rosepine.text;
     end
 
