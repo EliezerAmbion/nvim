@@ -73,9 +73,9 @@ return {
 
     lsp_zero.setup {}
 
-    local rosepine = require('rose-pine.palette')
-    vim.api.nvim_set_hl(0, "MyPmenu", { fg = 'White' })
-    vim.api.nvim_set_hl(0, "MyCursorLine", { bg = rosepine.pine, fg = rosepine.text, bold = true, italic = true })
+    local G = require('config.globals')
+    vim.api.nvim_set_hl(0, "MyPmenu", { fg = G.rosepine.fg })
+    vim.api.nvim_set_hl(0, "MyCursorLine", { bg = G.rosepine.bg, fg = G.rosepine.fgDark, bold = true, italic = true })
 
     cmp.setup {
       completion = {

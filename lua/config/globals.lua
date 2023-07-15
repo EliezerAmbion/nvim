@@ -1,4 +1,4 @@
-G = {}
+local G = {}
 
 G.alpha = {
   footer = 'Always pray'
@@ -6,8 +6,10 @@ G.alpha = {
 
 local rosepine = require('rose-pine.palette')
 G.rosepine = {
-  cursorLine = {
-    fg = rosepine.text,
-    bg = rosepine.foam,
-  },
+  fg = rosepine.text,
+  bg = rosepine.foam,
+  border = rosepine.gold,
+  fgDark = rosepine.overlay
 }
+
+return G
