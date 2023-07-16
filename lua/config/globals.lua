@@ -3,7 +3,6 @@ local G = {}
 G.alpha = function()
   local config = {
     footer = 'Always pray'
-
   }
   return config
 end
@@ -17,11 +16,6 @@ G.rosepine = function()
     fgDark = r.overlay
   }
   return config
-end
-
-G.test = function()
-  local maximizer = require('maximizer')
-  return maximizer
 end
 
 return G
