@@ -5,7 +5,7 @@ return {
   priority = 1000,
 
   config = function()
-    local G = require('config.globals')
+    local G = require('config.globals').rosepine()
 
     require('rose-pine').setup({
       -- @usage 'auto'|'main'|'moon'|'dawn'
@@ -22,7 +22,7 @@ return {
         background_nc = '_experimental_nc',
         panel = 'base',
         panel_nc = 'base',
-        border = G.rosepine.border,
+        border = G.border,
         comment = 'muted',
         link = 'iris',
         punctuation = 'subtle',
@@ -37,16 +37,16 @@ return {
       -- https://github.com/rose-pine/neovim/wiki/Recipes
       highlight_groups = {
         -- Telescope
-        TelescopeSelection = { fg = G.rosepine.fg, bg = G.rosepine.bg, blend = 20 },
-        TelescopeSelectionCaret = { fg = G.rosepine.bg, },
+        --TelescopeSelection = { fg = G.config.fg, bg = G.rosepine.bg, blend = 20 },
+        --TelescopeSelectionCaret = { fg = G.rosepine.bg, },
 
         -- Indent Blankline
         IndentBlanklineContextChar = {
-          fg = G.rosepine.fg,
+          -- fg = G.rosepine.fg,
         },
 
         -- Blend colours against the "base" background
-        CursorLine = { bg = G.rosepine.bg, blend = 20 },
+        --CursorLine = { bg = G.config.bg, blend = 20 },
         -- StatusLine = { fg = 'text', bg = 'love', blend = 60 },
         -- ColorColumn = { bg = 'pine' },
       }

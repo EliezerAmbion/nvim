@@ -55,10 +55,10 @@ return {
     -- dashboard.section.buttons.opts.hl = 'Keyword'
     -- dashboard.section.footer.opts.hl = 'Type'
 
-    local G = require('config.globals')
+    local G = require('config.globals').alpha()
     dashboard.section.header.val = vim.split(logo .. '\n' .. getGreeting('Eli'), '\n')
     dashboard.section.buttons.val = keys
-    dashboard.section.footer.val = G.alpha.footer
+    dashboard.section.footer.val = G.footer
 
     alpha.setup(dashboard.opts)
 
