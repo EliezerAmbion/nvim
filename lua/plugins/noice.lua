@@ -1,6 +1,6 @@
 return {
   "folke/noice.nvim",
-  event = "VeryLazy",
+  event = "VeryLazy", -- set to verylazy instead of lazy true to load commandline
   dependencies = {
     -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
     "MunifTanjim/nui.nvim",

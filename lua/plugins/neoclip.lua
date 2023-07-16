@@ -1,6 +1,6 @@
 return {
   'AckslD/nvim-neoclip.lua',
-  lazy = false,
+  event = 'VeryLazy', -- set to verylazy instead of lazy true to make yanking in neoclip available on startup
   dependencies = {
     -- { 'kkharji/sqlite.lua', module = 'sqlite' }, -- no need to save in sql
     { 'nvim-telescope/telescope.nvim' },

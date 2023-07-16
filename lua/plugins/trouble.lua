@@ -1,5 +1,6 @@
 return {
   "folke/trouble.nvim",
+  lazy = true, -- gitsigns will load this
   dependencies = { "nvim-tree/nvim-web-devicons" },
   keys = {
     { "<leader>xx", "<cmd>TroubleToggle<cr>",                       desc = 'Trouble Toggle' },
