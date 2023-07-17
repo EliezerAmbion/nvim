@@ -16,6 +16,29 @@ return {
   },
 
   opts = {
+    debugger = {
+      enabled = true,
+      run_via_dap = false, -- to use flutter reload and restart in debugger mode
+      register_configurations = function(paths)
+        require("dap").configurations.dart = {
+          {
+            type = "dart",
+            request = "launch",
+            name = "tm-chateasy-mobile (Dev)",
+            flutterMode = "debug"
+          },
+          {
+            type = "dart",
+            request = "launch",
+            name = "tm-chateasy-mobile (Prod)",
+            flutterMode = "release"
+          },
+        }
+
+        -- require("dap.ext.vscode").load_launchjs() -- check if this is working
+      end,
+    },
+
     closing_tags = {
       -- highlight = 'ErrorMsg', -- ErrorMsg will make closing tag to red
       prefix = '>> ',
