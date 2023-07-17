@@ -29,7 +29,7 @@ normalmoderemap("<C-Down>", "<cmd>resize -2<cr>", "Decrease window height")
 normalmoderemap("<C-Left>", "<cmd>vertical resize -2<cr>", "Decrease window width")
 normalmoderemap("<C-Right>", "<cmd>vertical resize +2<cr>", "Increase window width")
 
-normalmoderemap('<leader>o', 'o<esc>0', 'add a space below w/o leaving normal mode')
+normalmoderemap('<leader>o', 'o<esc>0', 'Add a space BELOW w/o leaving normal mode')
 normalmoderemap('<leader>O', 'O<Esc>0', 'Add a space ABOVE w/o leaving normal mode')
 
 normalmoderemap('x', '"_x', 'Delete single char w/o copying to the register')

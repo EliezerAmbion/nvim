@@ -15,6 +15,7 @@ return {
     { '<leader>fo', function() require('telescope.builtin').oldfiles() end,     desc = 'Find Recents' },
     { '<leader>fg', function() require('telescope.builtin').git_branches() end, desc = 'Find Git Branches' },
     { '<leader>fc', function() require('telescope.builtin').git_commits() end,  desc = 'Find Git Commits' },
+    { '<leader>fk', '<cmd>Telescope keymaps<cr>',                               desc = 'Find Keymaps' },
   },
 
   config = function()
