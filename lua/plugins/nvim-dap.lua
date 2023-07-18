@@ -18,13 +18,29 @@ return {
       -- This command was introduced upstream in https://github.com/dart-lang/sdk/commit/b68ccc9a
       args = { "debug_adapter" }
     }
+
+    local dartSdkPath
+    local flutterSdkPath
+
+    if vim.fn.has('mac') == 1 then
+      dartSdkPath = os.getenv('HOME') .. '/opt/homebrew/opt/dart/libexec'
+      flutterSdkPath = os.getenv('HOME') .. '/Users/eli/fvm/versions/2.10.0'
+    elseif vim.fn.has('win32') == 1 then
+      dartSdkPath = 'C:\\Users\\eliez\\Documents\\flutter\\bin\\cache\\dart-sdk'
+      flutterSdkPath = 'C:\\Users\\eliez\\Documents\\flutter'
+    else
+      error('Unsupported operating system')
+    end
+
     dap.configurations.dart = {
       {
         type = "dart",
         request = "launch",
         name = "Launch Dart Program",
-        dartSdkPath = os.getenv('HOME') .. '/opt/homebrew/opt/dart/libexec',
-        flutterSdkPath = os.getenv('HOME') .. '/Users/eli/fvm/versions/2.10.0',
+        dartSdkPath = dartSdkPath,
+        flutterSdkPath = flutterSdkPath,
+        -- dartSdkPath = os.getenv('HOME') .. '/opt/homebrew/opt/dart/libexec',
+        -- flutterSdkPath = os.getenv('HOME') .. '/Users/eli/fvm/versions/2.10.0',
 
         -- The nvim-dap plugin populates this variable with the filename of the current buffer
         program = "${file}",

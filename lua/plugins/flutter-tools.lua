@@ -19,6 +19,7 @@ return {
     debugger = {
       enabled = true,
       run_via_dap = false, -- to use flutter reload and restart in debugger mode
+
       register_configurations = function(paths)
         require("dap").configurations.dart = {
           {
@@ -34,8 +35,6 @@ return {
             flutterMode = "release"
           },
         }
-
-        -- require("dap.ext.vscode").load_launchjs() -- check if this is working
       end,
     },
 
