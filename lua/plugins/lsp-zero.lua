@@ -74,7 +74,7 @@ return {
     lsp_zero.setup {}
 
     local G = require('config.globals').rosepine()
-    vim.api.nvim_set_hl(0, "MyPmenu", { fg = G.fg })
+    vim.api.nvim_set_hl(0, "MyPmenu", { fg = G.border })
     vim.api.nvim_set_hl(0, "MyCursorLine", { bg = G.bg, fg = G.fgDark, bold = true, italic = true })
 
     cmp.setup {
