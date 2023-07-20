@@ -16,13 +16,9 @@ return {
     { '<leader>Gm', '<cmd>DiffviewOpen master<cr>',                             desc = 'Diffview Open Master' },
   },
 
-  config = function()
-    local neogit = require('neogit')
-
-    neogit.setup {
-      integrations = {
-        diffview = true,
-      }
+  opts = {
+    integrations = {
+      diffview = true,
     }
-  end
+  }
 }

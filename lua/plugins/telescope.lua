@@ -18,48 +18,46 @@ return {
     { '<leader>fk', function() require('telescope.builtin').keymaps() end,      desc = 'Find Keymaps' },
   },
 
-  config = function()
-    require('telescope').setup({
-      defaults = {
-        border = true,
+  opts = {
+    defaults = {
+      border = true,
 
-        layout_strategy = 'vertical',
-        layout_config = { prompt_position = 'top', width = 0.95, mirror = true },
-        sorting_strategy = "ascending",
-        winblend = 0,
+      layout_strategy = 'vertical',
+      layout_config = { prompt_position = 'top', width = 0.95, mirror = true },
+      sorting_strategy = "ascending",
+      winblend = 0,
 
-        file_ignore_patterns = {
-          'build',
-          'ios',
-          'macos',
-          'linux',
-          'web',
-          'android',
-          'windows',
-        },
-
-        mappings = {
-          i = {
-            ['<esc>'] = function(prompt_bufnr)
-              require('telescope.actions').close(prompt_bufnr)
-            end,
-            ['<C-j>'] = function(prompt_bufnr)
-              require('telescope.actions').move_selection_next(prompt_bufnr)
-            end,
-            ['<C-k>'] = function(prompt_bufnr)
-              require('telescope.actions').move_selection_previous(prompt_bufnr)
-            end,
-
-            -- disable ctrl p and n for navigating in telescope
-            ['<C-p>'] = function() end,
-            ['<C-n>'] = function() end,
-          },
-        },
+      file_ignore_patterns = {
+        'build',
+        'ios',
+        'macos',
+        'linux',
+        'web',
+        'android',
+        'windows',
       },
 
-      --[[ extensions = {
-        require('telescope').load_extension('neoclip')
-      } ]]
-    })
-  end,
+      mappings = {
+        i = {
+          ['<esc>'] = function(prompt_bufnr)
+            require('telescope.actions').close(prompt_bufnr)
+          end,
+          ['<C-j>'] = function(prompt_bufnr)
+            require('telescope.actions').move_selection_next(prompt_bufnr)
+          end,
+          ['<C-k>'] = function(prompt_bufnr)
+            require('telescope.actions').move_selection_previous(prompt_bufnr)
+          end,
+
+          -- disable ctrl p and n for navigating in telescope
+          ['<C-p>'] = function() end,
+          ['<C-n>'] = function() end,
+        },
+      },
+    },
+
+    --[[ extensions = {
+      require('telescope').load_extension('neoclip')
+    } ]]
+  }
 }
