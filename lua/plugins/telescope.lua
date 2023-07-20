@@ -1,7 +1,7 @@
 return {
   'nvim-telescope/telescope.nvim',
   tag = '0.1.1', -- or branch = '0.1.1',
-  lazy = true,
+  event = 'VeryLazy',
   dependencies = {
     { 'nvim-lua/plenary.nvim' },
   },
@@ -15,7 +15,7 @@ return {
     { '<leader>fo', function() require('telescope.builtin').oldfiles() end,     desc = 'Find Recents' },
     { '<leader>fg', function() require('telescope.builtin').git_branches() end, desc = 'Find Git Branches' },
     { '<leader>fc', function() require('telescope.builtin').git_commits() end,  desc = 'Find Git Commits' },
-    { '<leader>fk', '<cmd>Telescope keymaps<cr>',                               desc = 'Find Keymaps' },
+    { '<leader>fk', function() require('telescope.builtin').keymaps() end,      desc = 'Find Keymaps' },
   },
 
   config = function()

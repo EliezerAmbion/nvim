@@ -60,8 +60,8 @@ return {
 
     lsp = {
       color = {
-        enabled = true,   -- enabled color variables
-        foreground = true -- will color the color variables
+        enabled = true,    -- enabled color variables
+        foreground = false -- will color the color variables
       },
 
       settings = {
@@ -81,6 +81,10 @@ return {
       },
     },
 
+    dev_log = {
+      enabled = true,
+      open_cmd = 'tabnew'
+    }
     -- no need to add flutter_path on windows, you have added a path in environment variables
     -- To test if it is working, type :FlutterRun
     -- flutter_path = '<C:/Users/eliez/Documents/flutter/bin/dart.bat>',
