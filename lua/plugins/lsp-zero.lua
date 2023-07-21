@@ -29,17 +29,7 @@ return {
     -- local lsp_config = require('lspconfig')
     local lsp_zero = require('lsp-zero').preset({})
     local cmp = require 'cmp'
-
-    -- Fix Undefined global 'vim'
-    lsp_zero.configure('lua_ls', {
-      settings = {
-        Lua = {
-          diagnostics = {
-            globals = { 'vim' }
-          }
-        }
-      }
-    })
+    local mason = require('mason')
 
     local on_attach = function(_, bufnr)
       local opts = { buffer = bufnr, remap = false }
@@ -58,8 +48,18 @@ return {
       -- vim.keymap.set('n', '<leader>dl', function() vim.diagnostic.setqflist() end, opts)
     end
 
+    ---@forLSP_ZERO
+    -- Fix Undefined global 'vim'
+    lsp_zero.configure('lua_ls', {
+      settings = {
+        Lua = {
+          diagnostics = {
+            globals = { 'vim' }
+          }
+        }
+      }
+    })
     lsp_zero.on_attach(on_attach)
-
     lsp_zero.format_on_save({
       format_opts = {
         async = false,
@@ -70,9 +70,9 @@ return {
         ['dartls'] = { 'dart', }
       }
     })
-
     lsp_zero.setup {}
 
+    ---@forCMP
     local G = require('config.globals').rosepine()
     vim.api.nvim_set_hl(0, "MyPmenu", { fg = G.border })
     vim.api.nvim_set_hl(0, "MyCursorLine", { bg = G.bg, fg = G.fgDark, bold = true, italic = true })
@@ -110,5 +110,14 @@ return {
         ['<CR>'] = cmp.mapping.confirm { select = true }, -- select first candidate in autocomplete upon enter
       },
     }
+
+    ---@forMASON
+    mason.setup({
+      ui = {
+        border = 'rounded',
+        height = 0.8,
+        width = 0.6
+      }
+    })
   end,
 }

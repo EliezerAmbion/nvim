@@ -34,6 +34,10 @@ require("lazy").setup({
 
   ui = {
     border = 'rounded', ---@values: look for find help: border
+    size = {
+      height = 0.8,
+      width = 0.6
+    }
   },
 
   install = { colorscheme = { "rose-pine", }, missing = true },
