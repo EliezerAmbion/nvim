@@ -13,6 +13,7 @@ return {
     { '<leader>rs', '<cmd>FlutterRestart<cr>',             desc = 'Flutter Restart' },
     { '<leader>rt', '<cmd>Telescope flutter commands<cr>', desc = 'Flutter Tools Commands' },
     { '<leader>rv', '<cmd>Telescope flutter fvm<cr>',      desc = 'Flutter Change SDK' },
+    -- { '<leader>rw', '<cmd>TermExec cmd="fvm flutter pub run build_runner watch"<cr>', desc = 'Flutter Change SDK' },
   },
 
   opts = {
