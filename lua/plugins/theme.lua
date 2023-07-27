@@ -12,7 +12,7 @@ return {
       -- variant = 'moon',
       --- @usage 'main'|'moon'|'dawn'
       dark_variant = 'moon',
-      bold_vert_split = true,
+      -- bold_vert_split = true,
       dim_nc_background = true, --- @TODO: what is this?
       disable_background = false,
       disable_float_background = false,
