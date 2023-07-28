@@ -1,9 +1,3 @@
-# if you want to change the config directory on mac:
-# export XDG_CONFIG_HOME="$HOME/.config"
-
-# NOTE: this is a copy of the lazygit directory, paste this to .config if needed
-# then run the script above to change the location where lazygit reads its configuration.
-
 gui:
   splitDiff: 'always'
   mainPanelSplitMode: 'vertical'
