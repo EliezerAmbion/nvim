@@ -1,0 +1,31 @@
+# if you want to change the config directory on mac:
+# export XDG_CONFIG_HOME="$HOME/.config"
+
+# NOTE: this is a copy of the lazygit directory, paste this to .config if needed
+# then run the script above to change the location where lazygit reads its configuration.
+
+gui:
+  splitDiff: 'always'
+  mainPanelSplitMode: 'vertical'
+  border: 'double'
+  theme:
+    selectedLineBgColor:
+      - underline
+    inactiveBorderColor:
+      - '#ababab'
+    activeBorderColor:
+      - yellow
+      - bold
+
+keybinding:
+  universal:
+    quit: null # disabled this bcus I don't like q for quit
+    stashAllChanges: null # disable keymaps of s to prevent conflict with select
+    select: 's'
+
+# determines whether hitting 'esc' will quit the application when there is nothing to cancel/close
+quitOnTopLevelReturn: true
+
+git:
+  paging:
+    pager: delta --dark --side-by-side
