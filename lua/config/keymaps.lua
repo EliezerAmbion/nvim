@@ -34,6 +34,8 @@ normalmoderemap('<leader>O', 'O<Esc>0', 'Add a space ABOVE w/o leaving normal mo
 
 normalmoderemap('x', '"_x', 'Delete single char w/o copying to the register')
 
+normalmoderemap('<leader>in', '<cmd>Inspect<cr>', 'Inspect Under Cursor')
+
 -- Copying to system clipboard
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = 'Shift V <leader>y: Copy the line to system clipboard' })
 normalmoderemap('<leader>Y', [["+Y]], '<leader>y a p: Copy the paragraph to system clipboard')

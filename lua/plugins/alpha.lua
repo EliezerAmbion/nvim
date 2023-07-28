@@ -10,12 +10,17 @@ return {
 
     local logo = [[
 
-   ███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗
-   ████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║
-   ██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║
-   ██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║
-   ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║
-   ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝
+
+
+
+
+
+███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗
+████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║
+██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║
+██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║
+██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║
+╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝
 
     ]]
 
@@ -51,9 +56,9 @@ return {
       dashboard.button('fo', '󱋡  Recents', '<cmd>Telescope oldfiles<cr>'),
     }
 
-    dashboard.section.header.opts.hl = 'Include'
-    dashboard.section.buttons.opts.hl = 'Keyword'
-    dashboard.section.footer.opts.hl = 'AlphaFooter'
+    dashboard.section.header.opts.hl = 'Define'
+    dashboard.section.buttons.opts.hl = 'Macro'
+    dashboard.section.footer.opts.hl = 'Identifier'
 
     local G = require('config.globals').alpha()
     dashboard.section.header.val = vim.split(logo .. '\n' .. getGreeting('Eli'), '\n')
