@@ -13,7 +13,8 @@ return {
   },
 
   config = function(_, opts)
-    -- vim.api.nvim_set_hl(0, "@include", { link = 'Title' })
+    -- change highlight color of include
+    vim.api.nvim_set_hl(0, "@include", { link = 'Title' })
 
     require('nvim-treesitter.configs').setup(opts)
   end

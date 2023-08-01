@@ -41,6 +41,9 @@ return {
           },
         },
       },
+      git = {
+        ignore = false,
+      }
     }
   end,
 
