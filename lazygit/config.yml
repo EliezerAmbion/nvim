@@ -1,3 +1,4 @@
+
 gui:
   splitDiff: 'always'
   mainPanelSplitMode: 'vertical'
@@ -23,3 +24,7 @@ quitOnTopLevelReturn: true
 git:
   paging:
     pager: delta --dark --side-by-side
+
+os:
+  editCommandTemplate: '{{editor}} --server /tmp/nvim-server.pipe --remote-tab "$(pwd)/{{filename}}"'
+  editCommand: 'nvim'
