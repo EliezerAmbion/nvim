@@ -38,9 +38,12 @@ return {
       -- Change specific vim highlight groups
       -- https://github.com/rose-pine/neovim/wiki/Recipes
       highlight_groups = {
+        Search = { bg = G.border, fg = G.fgDark },
+        -- Comment = { fg = 'muted' },
+
         -- Telescope
         TelescopeSelection = { fg = G.fg, bg = G.bg, blend = 30 },
-        TelescopeSelectionCaret = { fg = G.bg, },
+        TelescopeSelectionCaret = { fg = G.border, },
 
         -- Indent Blankline
         IndentBlanklineContextChar = {

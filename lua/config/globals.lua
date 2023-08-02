@@ -12,8 +12,8 @@ G.rosepine = function()
   local config = {
     fg = r.text,
     bg = r.foam,
-    border = r.gold,
-    fgDark = r.overlay
+    border = r.love,    -- rose | pine
+    fgDark = r.overlay, -- base | surface | overlay
   }
   return config
 end
