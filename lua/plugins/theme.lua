@@ -11,7 +11,7 @@ return {
       -- @usage 'auto'|'main'|'moon'|'dawn'
       -- variant = 'moon',
       --- @usage 'main'|'moon'|'dawn'
-      dark_variant = 'moon',
+      dark_variant = 'main',
       -- bold_vert_split = true,
       dim_nc_background = true, --- @TODO: what is this?
       disable_background = false,
