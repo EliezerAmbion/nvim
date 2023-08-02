@@ -36,6 +36,9 @@ normalmoderemap('x', '"_x', 'Delete single char w/o copying to the register')
 
 normalmoderemap('<leader>in', '<cmd>Inspect<cr>', 'Inspect Under Cursor')
 
+normalmoderemap('<leader>aa', '<esc>gg<S-v>G', 'Highlight All Texts')
+normalmoderemap('<leader>ay', '<esc>gg<S-v>G<leader>y', 'Copy All Texts')
+
 -- Copying to system clipboard
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = 'Shift V <leader>y: Copy the line to system clipboard' })
 normalmoderemap('<leader>Y', [["+Y]], '<leader>y a p: Copy the paragraph to system clipboard')
@@ -48,6 +51,7 @@ vim.keymap.set("v", "J", ":m '>+1<cr>gv=gv", { desc = 'Move the highlighted line
 vim.keymap.set("v", "K", ":m '<-2<cr>gv=gv", { desc = 'Move the highlighted line ABOVE' })
 
 vim.keymap.set('i', '<C-l>', '<Right>', { desc = 'Insert Mode Move Cursor Right' })
+vim.keymap.set('i', '<S-Enter>', '<esc>o', { noremap = true, desc = 'Add a line below in insert mode' })
 
 -- When noremap is set to true in a key mapping in Vim or Neovim, it means that the mapping is non-recursive. Here's what it implies:
 -- 1. Non-Recursive Mapping: If noremap is set to true, the key mapping will not be expanded recursively.

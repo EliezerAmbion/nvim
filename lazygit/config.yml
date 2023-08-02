@@ -25,6 +25,7 @@ git:
   paging:
     pager: delta --dark --side-by-side
 
+# when opening or editing a file, this will open the same neovim instance
 os:
   editCommandTemplate: '{{editor}} --server /tmp/nvim-server.pipe --remote-tab "$(pwd)/{{filename}}"'
   editCommand: 'nvim'
