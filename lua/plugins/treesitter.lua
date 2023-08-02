@@ -14,7 +14,7 @@ return {
 
   config = function(_, opts)
     -- change highlight color of include
-    -- vim.api.nvim_set_hl(0, "@include", { link = 'Title' })
+    vim.api.nvim_set_hl(0, "@parameter", { link = 'Title' })
 
     require('nvim-treesitter.configs').setup(opts)
   end

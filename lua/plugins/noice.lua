@@ -26,5 +26,8 @@ return {
         view = 'split' -- bottom window instead of popup for noice last
       }
     },
+    presets  = {
+      lsp_doc_border = true, -- this will add a border on hovers, weird, I know.
+    }
   },
 }

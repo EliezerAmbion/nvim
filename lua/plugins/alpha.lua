@@ -8,22 +8,6 @@ return {
     local dashboard = require('alpha.themes.dashboard')
     -- require('telescope')
 
-    local logo = [[
-
-
-
-
-
-
-███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗
-████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║
-██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║
-██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║
-██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║
-╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝
-
-    ]]
-
     local function getGreeting(name)
       local tableTime = os.date('*t')
       local datetime = os.date(' %Y-%m-%d   %H:%M:%S')
@@ -56,12 +40,14 @@ return {
       dashboard.button('fo', '󱋡  Recents', '<cmd>Telescope oldfiles<cr>'),
     }
 
-    dashboard.section.header.opts.hl = 'Define'
+    dashboard.section.header.opts.hl = 'Macro'
     dashboard.section.buttons.opts.hl = 'Macro'
     dashboard.section.footer.opts.hl = 'Identifier'
 
     local G = require('config.globals').alpha()
-    dashboard.section.header.val = vim.split(logo .. '\n' .. getGreeting('Eli'), '\n')
+    local L = require('config.globals').logo()
+    dashboard.section.header.val = vim.split('\n\n\n\n\n\n\n\n\n\n\n\n' .. L.logo .. '\n\n\n\n' .. getGreeting('Eli'),
+      '\n')
     dashboard.section.buttons.val = keys
     dashboard.section.footer.val = G.footer
 
