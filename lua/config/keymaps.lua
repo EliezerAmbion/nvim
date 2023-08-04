@@ -37,7 +37,6 @@ normalmoderemap('x', '"_x', 'Delete single char w/o copying to the register')
 normalmoderemap('<leader>in', '<cmd>Inspect<cr>', 'Inspect Under Cursor')
 
 normalmoderemap('<leader>aa', '<esc>gg<S-v>G', 'Highlight All Texts')
-normalmoderemap('<leader>ay', '<esc>gg<S-v>G<leader>y', 'Copy All Texts')
 
 -- Copying to system clipboard
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = 'Shift V <leader>y: Copy the line to system clipboard' })

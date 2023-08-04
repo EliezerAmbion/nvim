@@ -35,9 +35,9 @@ return {
     end
 
     local keys = {
-      dashboard.button('ff', '  Find file', '<cmd>Telescope find_files<cr>'),
-      dashboard.button('fl', '  Find text', '<cmd>Telescope live_grep<cr>'),
-      dashboard.button('fo', '󱋡  Recents', '<cmd>Telescope oldfiles<cr>'),
+      dashboard.button('ff', ' Find file', '<cmd>Telescope find_files<cr>'),
+      dashboard.button('fl', ' Find text', '<cmd>Telescope live_grep<cr>'),
+      dashboard.button('fo', ' Recents', '<cmd>Telescope oldfiles<cr>'),
     }
 
     dashboard.section.header.opts.hl = 'Macro'
