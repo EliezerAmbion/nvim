@@ -11,6 +11,7 @@ return {
     { '<leader>rq', '<cmd>FlutterQuit<cr>',                desc = 'Flutter Quit' },
     { '<leader>rl', '<cmd>FlutterReload<cr>',              desc = 'Flutter Reload' },
     { '<leader>rs', '<cmd>FlutterRestart<cr>',             desc = 'Flutter Restart' },
+    { '<leader>rc', '<cmd>FlutterLogClear<cr>',            desc = 'Flutter Clear Dev Log' },
     { '<leader>rt', '<cmd>Telescope flutter commands<cr>', desc = 'Flutter Tools Commands' },
     { '<leader>rv', '<cmd>Telescope flutter fvm<cr>',      desc = 'Flutter Change SDK' },
     -- { '<leader>rw', '<cmd>TermExec cmd="fvm flutter pub run build_runner watch"<cr>', desc = 'Flutter Change SDK' },
