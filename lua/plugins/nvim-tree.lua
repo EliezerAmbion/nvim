@@ -9,6 +9,7 @@ return {
   config = function()
     -- change color for arrows in tree to light blue
     vim.cmd([[ highlight NvimTreeIndentMarker guifg=#3FC5FF ]])
+    -- vim.cmd([[ highlight NvimTreeCursorLine  guifg=#3FC5FF ]])
 
     require('nvim-tree').setup {
       update_focused_file = { enable = true },
@@ -21,6 +22,7 @@ return {
       },
 
       renderer = {
+        highlight_git = true, -- to highlight file that has changes or errors
         icons = {
           glyphs = {
             folder = {
