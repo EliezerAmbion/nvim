@@ -7,7 +7,7 @@ return {
   },
 
   config = function()
-    -- change color for arrows in tree to light blue
+    -- change color for arrows and indents
     vim.cmd([[ highlight NvimTreeIndentMarker guifg=#3FC5FF ]])
     -- vim.cmd([[ highlight NvimTreeCursorLine  guifg=#3FC5FF ]])
 
@@ -22,8 +22,12 @@ return {
       },
 
       renderer = {
-        highlight_git = true, -- to highlight file that has changes or errors
+        highlight_git = true, -- to highlight files that have changes or errors
+        indent_markers = {
+          enable = true,      -- indent line
+        },
         icons = {
+          git_placement = 'signcolumn',
           glyphs = {
             folder = {
               arrow_closed = "", -- arrow when folder is closed
@@ -44,7 +48,7 @@ return {
         },
       },
       git = {
-        ignore = false,
+        ignore = false, -- show files in .gitignore
       }
     }
   end,

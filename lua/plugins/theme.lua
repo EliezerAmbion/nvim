@@ -47,7 +47,7 @@ return {
 
         -- Indent Blankline
         IndentBlanklineContextChar = {
-          fg = G.border,
+          fg = G.bg,
         },
 
         -- Blend colours against the "base" background
