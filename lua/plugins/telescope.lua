@@ -22,10 +22,16 @@ return {
     defaults = {
       border = true,
 
-      layout_strategy = 'vertical',
-      layout_config = { prompt_position = 'top', width = 0.95, mirror = true },
-      sorting_strategy = "ascending",
-      winblend = 0,
+      -- layout_strategy = 'vertical', -- this will make telescope top, mid, bottom
+      layout_config = {
+        prompt_position = 'top',
+        width = 0.95,
+        -- mirror = true, -- this will reverse the file preview and find files/results
+        -- preview_width = 0.55, -- width of the file preview
+      },
+      sorting_strategy = "ascending", -- place files to top instead of bottom
+
+      winblend = 5,
 
       file_ignore_patterns = {
         'build',
